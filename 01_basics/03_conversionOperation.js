@@ -108,6 +108,31 @@ let gameCounter2 = 100;
 ++gameCounter2;
 console.log(gameCounter2);//101
 
+//Increment++ and Decrement--
+/*
+++ +1
+-- -1
+
+postfix and prefix
+
+X++      ++X
+
+let y, x=5;
+y= ++x;  //first increment then assign
+console.log(y) //6
+console.log(x) //6
+
+let b ,a=5;
+b=X++; //first assign then increment
+console.log(b); //5
+console.log(a); //6
+*/
+
+
+
+
+
+
 
 
 
