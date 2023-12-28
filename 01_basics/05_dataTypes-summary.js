@@ -49,3 +49,41 @@ Symbol	"symbol"
 Function "function"
 Any other object	"object"
 */
+
+
+
+//*************//MEMORY */
+/*
+ STACK MEMORY AND HEAP MEMORY
+
+
+ all primitive data types use STACK memory
+ all non-primitive data types use heap memory
+
+Stack(Primitive), Heap(Non-primitive)
+whenever stack memory is used, it means we get copy of the variable
+whenever object is defined in heap memory then there we get a reference of the original value so whatever is changed is changed in org value
+
+*/
+
+let myYoutubename = "hiteshchoudharydotcom"
+let anothername = myYoutubename
+console.log(anothername); //hiteshchoudharydotcom
+anothername= "chaiaurcode"
+
+console.log(myYoutubename);//hiteshchoudharydotcom
+console.log(anothername);//chaiaurcode
+
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "hitesh@google.com"
+
+console.log(userOne.email);//hitesh@google.com
+console.log(userTwo.email);//hitesh@google.com
+
