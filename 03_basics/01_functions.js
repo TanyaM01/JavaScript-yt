@@ -39,3 +39,46 @@ console.log(loginUserMessage("tanya"));//tanya just logged in!
 console.log(loginUserMessage(""))//passing empty string//just logged in!
 console.log(loginUserMessage())//please enter a username
                                // undefined
+
+/////////////////////////////////////
+function calculatePrice(num1){
+    return num1
+}
+console.log(calculatePrice(200, 400, 500))//200
+
+//REST OPERATOR  ...
+function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200, 400, 500)) //[ 200, 400, 500 ]
+
+function calculatePrice(val1, val2, ...num1){
+    return num1
+}
+console.log(calculatePrice(200, 400, 500,600))//[ 500, 600 ]
+
+
+const user = {
+    username: "tanya",
+    price: 199
+}
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+handleObject(user);//Username is tanya and price is 199
+handleObject({
+    username: "hitesh",
+    price: 399
+});
+
+const myNewArray = [200,400,100,600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArray))//400
+console.log(returnSecondValue([200,123,211]))//123
+
+
+
+
+
