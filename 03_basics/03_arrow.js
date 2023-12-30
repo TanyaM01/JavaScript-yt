@@ -59,8 +59,3 @@ console.log(addtwo(3,4))//7
 
 const addtwoo = (num1, num2) =>  ({username:"hitesh"})  //to return obj,paranthesis is req!
 console.log(addtwoo(3,4))//{ username: 'hitesh' }
-
-
-
-
-
