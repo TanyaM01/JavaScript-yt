@@ -60,3 +60,19 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+
+## project 3 solution code
+
+```javascript
+
+const clock = document.getElementById('clock')
+
+//you want to keep updating the date all the time
+//setinterval method 
+setInterval(function(){
+  let date = new Date()
+  clock.innerHTML= date.toLocaleString()
+}, 1000)
+
+
+```
