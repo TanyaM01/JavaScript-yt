@@ -42,11 +42,52 @@
     turngreen.innerText = "five"
 
 
+
     //
+    const tempLiList = document.querySelectorAll('li')
+    tempLiList // Nodelist(3) [li,li,li]
+    ->NodeList and html collection is not pure array
+    for each is avialable but not map in NodeList and html collection
+    in arrays, by default map is also available
+
+    const myArr= [1,2,3,4]
+    myArr ->you will see map by opening prototype
+
+    tempLiList.style.color="green" //error as it's a nodelist! not array
+    tempLiList[0].style.color='grren' //correct
+
+    //if there's only one h1 in document then also..
+    const myH1 = document.querySelectorAll('h1')//nodelist
+    myH1.style.color="green" //error as it's a nodelist!
+    myH1[0].style.color='grren' //correct
+
+    tempLiList.forEach(function (l){
+        l.style.backgroundColor = "green"
+    })
 
 
+    //document.getElementByClassName
+    <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">four</li>
+    </ul> 
 
+    const tempClassList = document.getElementByClassName('list-item')
+    tempClassList
+    //HTMLCollection(4) [li,li,li,li]
+    tempClassList.forEach( function(li){
+        console.log(li)
+    })
+    //ERROR! tempClassList.forEach is NOT A FUNCTION
 
+    so, convert this tempClassList(HTMLCollection) into array to proceed!
+    Array.from(tempClassList) //now it is an array...forEach, map,push  eall are there
+    const myConvertedArray = Array.from(tempClassList)
+    myConvertedArray //Array!
 
-
+    myConvertedArray.forEach(function(li){
+        li.style.color="orange"
+    })
 -->
