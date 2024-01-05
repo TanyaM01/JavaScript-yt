@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    const sayTanya = function(){
+        console.log("tanya")
+    }
+    //will not print continuously
+    setTimeout(sayTanya,2000)  //will be printed only once, in 2 secs it will print
+
+    /*
+    //will print continuously
+    setInterval(function(){
+        const date = new Date();
+        console.log(date.toLocaleString())
+    },5000)
+    */
+
+    const changeText = function(){
+         document.querySelector('h1').innerHTML="Best JS SERIES"
+    }
+
+    const changeMe = setTimeout(changeText,3000)  //will be printed only once, in 2 secs it will print
+    
+    //clearTimeout->will help to stop an event
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+</script>
+</html>
