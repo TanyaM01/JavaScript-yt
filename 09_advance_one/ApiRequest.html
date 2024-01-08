@@ -15,8 +15,16 @@
 <script>
 const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
    const xhr = new XMLHttpRequest();
-   xhr.open('GET',requestUrl)
-   console.log(xhr.readyState)
-   xhr.send()
+   xhr.open('GET',requestUrl) //method(what type of req you want to send),url)
+   xhr.onreadystatechange =function(){
+    console.log(xhr.readyState) //1
+    if(xhr.readyState === 4){
+        const data = JSON.parse(this.responseText) //converts string to json
+        console.log(typeof(data));
+        console.log(data.followers);
+    }
+   }
+   console.log("here")
+   xhr.send();//open gets called
 </script>
 </html>
