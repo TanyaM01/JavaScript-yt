@@ -120,7 +120,8 @@ consumePromiseFive()
 
 async function getAllUsers() {
     try {
-        //fetch: obj (wapas deta h promise)
+        //fetch api library  //micro task queue priority(will run first!)
+        //fetch: obj (wapas deta h promise) //feature in nodejs//successor to XMLhttpReq
         const response = await fetch('https://jsonplaceholder.typicode.com/users')
         //abhi jo data ara that is string from which you can't take out vals, so convert data into json
         //const data = response.json() (yei convert hone m time lega issilie isse bhi await krna h)
@@ -143,7 +144,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .catch((error) => {
     console.log(error)
 })
-*/
+*/ 
 
 
 
