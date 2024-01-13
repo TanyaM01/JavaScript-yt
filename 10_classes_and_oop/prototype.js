@@ -30,28 +30,47 @@ Array.prototype.heytanya = function(){
     console.log("tanya says hello")
 }
 myHeros.heytanya()//tanya says hello"
-heroPower.heytanya()//ERROR
+//heroPower.heytanya()//ERROR
 
 
 
 
 //INHERITANCE
-const user={
+const User={
     name: "chai",
     email: "chai@google.com"
 }
-const teacher ={
+const Teacher ={
     makeVideo: true
 }
 
-const teachingSupport = {
+const TeachingSupport = {
     isAvailable: false
 }
 
-const TaSupport = {
-    makeAssignment: 'Js assignment',
-    fulltime: true,
-    __proto__: teachingSupport
+const TAsupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+    __proto__: TeachingSupport //borrwing properties of TeachingSupport  //linking  objs
 }
 
-teacher.__proto__ = User
+//linking  objs
+Teacher.__proto__ = User  //now teacher can also access properties of User
+
+
+
+//new approach-> Modern syntax
+Object.setPrototypeOf(TeachingSupport, Teacher)//TeachingSupport accessing properties of Teacher
+
+
+
+////
+let anotherUsername = "ChaiAurCode    "
+String .prototype.trueLength = function(){
+    console.log(`${this}`);//ChaiAurCode
+    //console.log(`${this.name}`);
+    console.log(`True Length is: ${this.trim().length}`);
+}
+anotherUsername.trueLength()//True Length is: 11
+"tanya".trueLength()//True Length is: 5
+"iceatea".trueLength()//True Length is: 7
