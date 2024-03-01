@@ -7,7 +7,7 @@
 
 ## Project 1
 ```javascript
-console.log("tanya")
+//COLOR CHANGER//
 
 const buttons = document.querySelectorAll('.button')
 const body = document.querySelector("body")//tagname-body
@@ -15,8 +15,8 @@ const body = document.querySelector("body")//tagname-body
 buttons.forEach(function(button){
   console.log(button)
   button.addEventListener('click', function(e){
-    console.log(e)
-    console.log(e.target)
+    console.log(e)//mouse event
+    console.log(e.target)//(span ele)id="grey" 
     if(e.target.id ==='grey'){
       body.style.backgroundColor = e.target.id;
     }
